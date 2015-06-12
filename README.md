@@ -1,3 +1,2 @@
-# https://github.com/tkdblake93/google-homepage
-# theodinproject.com
-
+# The Odin Project
+# HTML/CSS Project: Google Homepage
