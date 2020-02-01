@@ -5,37 +5,52 @@
   <title>Google homepage</title>
   <style>
     #container {
-      width: 960px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 960px;
       margin: 0 auto;
+      height: 100vh;
+    }
+    .logo_box_container {
+      width: 100%;
     }
     .google_logo {
-      margin-top: 80px;
-      margin-left: 36%;
-      padding-top: 112px;
-      padding-bottom: 20px;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     img {
-      height: 95px;
+      max-height: 95px;
     }
     #searchbox {
-      margin-left: 20.3%;
+      text-align: center;
     }
     input[type="text"] {
       height: 1.8em;
       width: 42.45em;
     }
+    @media screen and (max-width: 576px) {
+      input[type="text"] {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
   <div id="container">
-    <div class="google_logo">
-      <img src="logo11w.png">
-    </div>
-    <div id="searchbox">
-      <form action="#" method="get">
-        <input type="text">
-      </form>
+    <div class="logo_box_container">
+      <div class="google_logo">
+        <img src="logo11w.png">
+      </div>
+      <div id="searchbox">
+        <form action="#" method="get">
+          <input type="text" id="search">
+        </form>
+      </div>
     </div>
   </div>
+  <script>
+    document.getElementById("search").focus();
+  </script>
 </body>
 </html>
